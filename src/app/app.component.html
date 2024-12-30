@@ -1,1 +1,16 @@
 <h2 class="text-3xl font-bold underline">Angular Concepts Implementation!</h2>
+
+<header class="my-4">
+     <nav class="border flex justify-center">
+          <ul class="flex gap-4">
+               <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+               <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+               <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+               <li><a [routerLink]="['user', 1, 'dd', { foo: 'foo', a: 's' }]" routerLinkActive="active">User Detail</a></li>
+          </ul>
+     </nav>
+</header>
+
+<section>
+     <router-outlet></router-outlet>
+</section>
