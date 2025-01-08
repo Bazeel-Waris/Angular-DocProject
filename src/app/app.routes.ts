@@ -7,6 +7,7 @@ import { ErrorHandler, inject } from '@angular/core';
 import { ProductPageComponent } from './home/product-page/product-page.component';
 import { UserPageComponent } from './home/user-page/user-page.component';
 import { UserDetailComponent } from './home/user-page/user-detail/user-detail.component';
+import { ProductsComponent } from './products/products.component';
 
 const resolvedChildATitle: ResolveFn<string> = () => Promise.resolve('child a');
 
@@ -45,6 +46,11 @@ export const routes: Routes = [
           path: 'contact', 
           title: 'Contact',
           component: ContactComponent
+     },
+     { 
+          path: 'products', 
+          title: 'Products',
+          component: ProductsComponent
      },
      { path: '**', component: ErrorPageComponent },
 ];

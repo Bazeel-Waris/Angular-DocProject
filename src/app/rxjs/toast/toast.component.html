@@ -1,0 +1,7 @@
+<div class="toast-container">
+     <div *ngFor="let toast of toasts"
+          [ngClass]="{'success': toast.type === 'success', 'error': toast.type === 'error', 'info': toast.type === 'info'}"
+          class="toast">
+          {{ toast.message }}
+     </div>
+</div>
